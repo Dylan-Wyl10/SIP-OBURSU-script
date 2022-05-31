@@ -1,0 +1,12 @@
+Version=0.7 
+Type=BSM
+PSID=0x20
+Priority=7
+TxMode=ALT
+TxChannel=SCH
+TxInterval=0
+DeliveryStart=
+DeliveryStop=
+Signature=False
+Encryption=False
+Payload=0014800e0c4c4cc0000da46de12a94952170890e0785000a119fd434837d57dc8e80c743769803d8
