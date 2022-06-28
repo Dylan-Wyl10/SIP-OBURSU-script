@@ -52,7 +52,7 @@ _detect_host()
     export DIR="/mnt/rw/rsu1609/snmp/mibs/"
     export IP="udp:127.0.0.1:161"
     #export IP="udp6:[::1]:161"
-    CHAN="172"
+    CHAN="180"
     TX_MODE="1"
   elif [[ $HOSTNAME =~ MK6C ]]; then
     export DIR="/mnt/rw/rsu1609/snmp/mibs/"
