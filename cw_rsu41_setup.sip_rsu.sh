@@ -22,6 +22,9 @@ HOSTNAME=$(cat /etc/hostname)
 #10.224.71.17 = 0x0A.0xE0.0x47.0x11
 FW_DSRC_ADDR1="0x0000000000000000000000000AE04711"
 FW_DSRC_PORT1="10002"
+#141.211.144.5 = 0x8D.0xD3.0x90.0x05
+FW_DSRC_ADDR2="0x0000000000000000000000008DD39005"
+FW_DSRC_PORT2="3344"
 FW_DSRC_RSSI1="-100"
 FW_DSRC_STRT1="07E501010000"
 FW_DSRC_STOP1="07E901010000"
@@ -52,7 +55,7 @@ _detect_host()
     export DIR="/mnt/rw/rsu1609/snmp/mibs/"
     export IP="udp:127.0.0.1:161"
     #export IP="udp6:[::1]:161"
-    CHAN="180"
+    CHAN="172"
     TX_MODE="1"
   elif [[ $HOSTNAME =~ MK6C ]]; then
     export DIR="/mnt/rw/rsu1609/snmp/mibs/"
@@ -285,15 +288,15 @@ rsuDsrcFwdEnable.3 i 1 \
 rsuDsrcFwdStatus.3 i 4
 }
 
-#RSM
+#Mcity edge device
 _set_WSMFwdRx4()
 {
 echo
 echo "SNMP: Set WSMFwd_Rx_*" 
 snmpset $RW_AUTH_ARGS \
 rsuDsrcFwdPsid.4 x $FW_DSRC_PSID_RSM \
-rsuDsrcFwdDestIpAddr.4 x $FW_DSRC_ADDR1 \
-rsuDsrcFwdDestPort.4 i $FW_DSRC_PORT1 \
+rsuDsrcFwdDestIpAddr.4 x $FW_DSRC_ADDR2 \
+rsuDsrcFwdDestPort.4 i $FW_DSRC_PORT2 \
 rsuDsrcFwdProtocol.4 i 2 \
 rsuDsrcFwdRssi.4 i $FW_DSRC_RSSI1 \
 rsuDsrcFwdMsgInterval.4 i 1 \
@@ -419,7 +422,7 @@ snmpset $RW_AUTH_ARGS \
 rsuIFMPsid.5 x 8004 \
 rsuIFMDsrcMsgId.5 i 31 \
 rsuIFMTxMode.5 i $TX_MODE \
-rsuIFMTxChannel.5 i 182 \
+rsuIFMTxChannel.5 i $CHAN \
 rsuIFMEnable.5 i 1 \
 rsuIFMStatus.5 i 4
 }
@@ -433,7 +436,7 @@ snmpset $RW_AUTH_ARGS \
 rsuIFMPsid.6 x 8005 \
 rsuIFMDsrcMsgId.6 i 31 \
 rsuIFMTxMode.6 i $TX_MODE \
-rsuIFMTxChannel.6 i 182 \
+rsuIFMTxChannel.6 i $CHAN \
 rsuIFMEnable.6 i 1 \
 rsuIFMStatus.6 i 4
 }
