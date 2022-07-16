@@ -245,7 +245,7 @@ rsuDsrcFwdDestIpAddr.1 x $FW_DSRC_ADDR1 \
 rsuDsrcFwdDestPort.1 i $FW_DSRC_PORT1 \
 rsuDsrcFwdProtocol.1 i 2 \
 rsuDsrcFwdRssi.1 i $FW_DSRC_RSSI1 \
-rsuDsrcFwdMsgInterval.1 i 1 \
+rsuDsrcFwdMsgInterval.1 i 2 \
 rsuDsrcFwdDeliveryStart.1 x $FW_DSRC_STRT1 \
 rsuDsrcFwdDeliveryStop.1 x $FW_DSRC_STOP1 \
 rsuDsrcFwdEnable.1 i 1 \
@@ -263,7 +263,7 @@ rsuDsrcFwdDestIpAddr.2 x $FW_DSRC_ADDR1 \
 rsuDsrcFwdDestPort.2 i $FW_DSRC_PORT1 \
 rsuDsrcFwdProtocol.2 i 2 \
 rsuDsrcFwdRssi.2 i $FW_DSRC_RSSI1 \
-rsuDsrcFwdMsgInterval.2 i 1 \
+rsuDsrcFwdMsgInterval.2 i 2 \
 rsuDsrcFwdDeliveryStart.2 x $FW_DSRC_STRT1 \
 rsuDsrcFwdDeliveryStop.2 x $FW_DSRC_STOP1 \
 rsuDsrcFwdEnable.2 i 1 \
@@ -281,7 +281,7 @@ rsuDsrcFwdDestIpAddr.3 x $FW_DSRC_ADDR1 \
 rsuDsrcFwdDestPort.3 i $FW_DSRC_PORT1 \
 rsuDsrcFwdProtocol.3 i 2 \
 rsuDsrcFwdRssi.3 i $FW_DSRC_RSSI1 \
-rsuDsrcFwdMsgInterval.3 i 1 \
+rsuDsrcFwdMsgInterval.3 i 2 \
 rsuDsrcFwdDeliveryStart.3 x $FW_DSRC_STRT1 \
 rsuDsrcFwdDeliveryStop.3 x $FW_DSRC_STOP1 \
 rsuDsrcFwdEnable.3 i 1 \
@@ -294,12 +294,12 @@ _set_WSMFwdRx4()
 echo
 echo "SNMP: Set WSMFwd_Rx_*" 
 snmpset $RW_AUTH_ARGS \
-rsuDsrcFwdPsid.4 x $FW_DSRC_PSID_RSM \
+rsuDsrcFwdPsid.4 x $FW_DSRC_PSID_BSM \
 rsuDsrcFwdDestIpAddr.4 x $FW_DSRC_ADDR2 \
 rsuDsrcFwdDestPort.4 i $FW_DSRC_PORT2 \
 rsuDsrcFwdProtocol.4 i 2 \
 rsuDsrcFwdRssi.4 i $FW_DSRC_RSSI1 \
-rsuDsrcFwdMsgInterval.4 i 1 \
+rsuDsrcFwdMsgInterval.4 i 2 \
 rsuDsrcFwdDeliveryStart.4 x $FW_DSRC_STRT1 \
 rsuDsrcFwdDeliveryStop.4 x $FW_DSRC_STOP1 \
 rsuDsrcFwdEnable.4 i 1 \
@@ -317,7 +317,7 @@ rsuDsrcFwdDestIpAddr.5 x $FW_DSRC_ADDR1 \
 rsuDsrcFwdDestPort.5 i $FW_DSRC_PORT1 \
 rsuDsrcFwdProtocol.5 i 2 \
 rsuDsrcFwdRssi.5 i $FW_DSRC_RSSI1 \
-rsuDsrcFwdMsgInterval.5 i 1 \
+rsuDsrcFwdMsgInterval.5 i 2 \
 rsuDsrcFwdDeliveryStart.5 x $FW_DSRC_STRT1 \
 rsuDsrcFwdDeliveryStop.5 x $FW_DSRC_STOP1 \
 rsuDsrcFwdEnable.5 i 1 \
@@ -335,7 +335,7 @@ rsuDsrcFwdDestIpAddr.6 x $FW_DSRC_ADDR1 \
 rsuDsrcFwdDestPort.6 i $FW_DSRC_PORT1 \
 rsuDsrcFwdProtocol.6 i 2 \
 rsuDsrcFwdRssi.6 i $FW_DSRC_RSSI1 \
-rsuDsrcFwdMsgInterval.6 i 1 \
+rsuDsrcFwdMsgInterval.6 i 2 \
 rsuDsrcFwdDeliveryStart.6 x $FW_DSRC_STRT1 \
 rsuDsrcFwdDeliveryStop.6 x $FW_DSRC_STOP1 \
 rsuDsrcFwdEnable.6 i 1 \
